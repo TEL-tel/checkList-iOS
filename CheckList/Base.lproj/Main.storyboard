@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CheckList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXf-jV-xcp">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <connections>
+                                    <segue destination="fBU-EJ-6lZ" kind="embed" identifier="goshoping" id="lYM-cb-p9R"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jlX-JE-khe" customClass="GADBannerView">
+                                <rect key="frame" x="47" y="812" width="320" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="5m7-Pl-eJP"/>
+                                    <constraint firstAttribute="width" constant="320" id="OmJ-Q8-3PO"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Bv-ec-Vas">
+                                <rect key="frame" x="334" y="732" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Aoa-E0-hzb"/>
+                                    <constraint firstAttribute="width" constant="60" id="yeS-YR-0cu"/>
+                                </constraints>
+                                <state key="normal" image="addButton"/>
+                                <connections>
+                                    <action selector="addButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aQr-eP-HJy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Bv-ec-Vas" secondAttribute="trailing" constant="20" id="5Iw-kd-9wO"/>
+                            <constraint firstItem="jlX-JE-khe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="EsB-Aw-ocW"/>
+                            <constraint firstItem="cXf-jV-xcp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Gwk-uZ-DjM"/>
+                            <constraint firstItem="cXf-jV-xcp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Q3m-mY-g69"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cXf-jV-xcp" secondAttribute="trailing" id="csE-j5-fOH"/>
+                            <constraint firstAttribute="bottom" secondItem="cXf-jV-xcp" secondAttribute="bottom" id="gxZ-BY-b2L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1Bv-ec-Vas" secondAttribute="bottom" constant="70" id="hPR-zf-N4D"/>
+                            <constraint firstItem="jlX-JE-khe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l2v-Vb-i0z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="1Bv-ec-Vas" id="Uah-mn-67w"/>
+                        <outlet property="bannerView" destination="jlX-JE-khe" id="JGQ-3C-uzj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
+        </scene>
+        <!--チェックリスト-->
+        <scene sceneID="XFk-iM-2L4">
+            <objects>
+                <viewController id="fBU-EJ-6lZ" customClass="ContainerViewController" customModule="CheckList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D6b-oZ-74d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="avh-QF-QBa">
+                                <rect key="frame" x="0.0" y="88" width="414" height="754"/>
+                                <gestureRecognizers/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShopingCell" id="Nhb-Cd-cFa">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nhb-Cd-cFa" id="vxc-cY-xsX">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="olq-GL-2kq" appends="YES" id="R1s-X5-X6D"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMd-8u-CdB">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="チェックリスト" id="dEn-6x-4FA">
+                                        <barButtonItem key="leftBarButtonItem" title="編集" id="XvZ-NL-3GS">
+                                            <connections>
+                                                <action selector="editButtonAction:" destination="fBU-EJ-6lZ" id="qA1-q4-OPn"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="2cS-YB-jxQ">
+                                            <connections>
+                                                <action selector="trashButtonAction:" destination="fBU-EJ-6lZ" id="zN2-RB-3CL"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f75-pc-b6i"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="UMd-8u-CdB" firstAttribute="trailing" secondItem="f75-pc-b6i" secondAttribute="trailing" id="CVo-v4-MS8"/>
+                            <constraint firstItem="avh-QF-QBa" firstAttribute="leading" secondItem="D6b-oZ-74d" secondAttribute="leading" id="IEw-fc-Fex"/>
+                            <constraint firstAttribute="trailing" secondItem="avh-QF-QBa" secondAttribute="trailing" id="cqu-QH-nnY"/>
+                            <constraint firstItem="UMd-8u-CdB" firstAttribute="top" secondItem="f75-pc-b6i" secondAttribute="top" id="d1h-k0-Epl"/>
+                            <constraint firstItem="avh-QF-QBa" firstAttribute="top" secondItem="UMd-8u-CdB" secondAttribute="bottom" id="hmh-s7-0t5"/>
+                            <constraint firstItem="UMd-8u-CdB" firstAttribute="leading" secondItem="f75-pc-b6i" secondAttribute="leading" id="mRe-ef-Tss"/>
+                            <constraint firstAttribute="bottom" secondItem="avh-QF-QBa" secondAttribute="bottom" constant="10" id="qw3-HZ-9Qk"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="チェックリスト" id="nTq-8u-Txp"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="bannerView" destination="jlX-JE-khe" id="sTR-Hu-8D0"/>
+                        <outlet property="editButton" destination="XvZ-NL-3GS" id="4LJ-sh-1dt"/>
+                        <outlet property="shopingListTableView" destination="avh-QF-QBa" id="Zxt-Bg-tId"/>
+                        <outlet property="trashButton" destination="2cS-YB-jxQ" id="UxW-gn-e6w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t0r-sx-4I7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="olq-GL-2kq">
+                    <connections>
+                        <action selector="didSwaipedAction:" destination="fBU-EJ-6lZ" id="2aR-LT-ZdC"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1808.6956521739132" y="113.83928571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="addButton" width="2268" height="2268"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
