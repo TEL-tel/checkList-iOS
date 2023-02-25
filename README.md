@@ -11,19 +11,27 @@ iOSアプリ制作の学習のアウトプットとしてiOSのチェックリ�
 
 ### チェックリストのON / OFF!
 https://user-images.githubusercontent.com/63204362/221325504-c9042959-3902-49a1-bedd-69bff0ef0595.mp4
+<br clear="all">
+</br>
 
 
 ### アイテムの追加
 https://user-images.githubusercontent.com/63204362/221325542-177e2c79-070b-4bef-a857-39528a985a7c.mp4
+<br clear="all">
+</br>
 
 
 ### アイテムの並び替え
 https://user-images.githubusercontent.com/63204362/221325569-a99c561a-72d4-4a8d-8cf5-25784e684fe8.mp4
+<br clear="all">
+</br>
 
 
 
 ### アイテムの削除
 https://user-images.githubusercontent.com/63204362/221325557-f46ecb77-b3cf-4b26-8a44-5971bf647094.mp4
+<br clear="all">
+</br>
 
 
 ## 実装予定の機能
