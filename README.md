@@ -9,6 +9,7 @@ iOSアプリ制作の学習のアウトプットとしてiOSのチェックリ�
 - アイテムの削除
 
 ### チェックリストのON / OFF
+https://github.com/TEL-tel/checkList-iOS/blob/main/Assets/CheckList_check.mp4
 ### アイテムの追加
 ![add](https://github.com/TEL-tel/checkList-iOS/blob/main/Assets/CheckList_check.gif)
 ### アイテムの並び替え
