@@ -1,8 +1,10 @@
 # 概要
 iOSアプリ制作の学習のアウトプットとしてiOSのチェックリストを作成しました。
+<br>
 ![add](https://github.com/TEL-tel/checkList-iOS/blob/main/Assets/CheckList_check.gif)
 
 ## 機能
+
 主な機能は以下のようになります。
 - チェックリストのON / OFF
 - アイテムの追加
