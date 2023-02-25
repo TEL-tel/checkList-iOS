@@ -10,7 +10,7 @@ iOSアプリ制作の学習のアウトプットとしてiOSのチェックリ�
 
 ### チェックリストのON / OFF
 ### アイテムの追加
-![add](https://github.com/TEL-tel/checkList-iOS/blob/main/Assets/CheckList_add_AdobeExpress.gif)
+![add](https://github.com/TEL-tel/checkList-iOS/blob/main/Assets/CheckList_check_AdobeExpress (1).gif)
 ### アイテムの並び替え
 ### アイテムの削除
 
